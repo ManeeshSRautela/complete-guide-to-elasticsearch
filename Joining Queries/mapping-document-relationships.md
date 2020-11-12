@@ -1,13 +1,15 @@
 # Mapping document relationships
 
 ```
-PUT /department/_mapping
+PUT /department
 {
-  "properties": {
-    "join_field": { 
-      "type": "join",
-      "relations": {
-        "department": "employee"
+"mappings":{
+    "properties": {
+      "join_field": { 
+        "type": "join",
+        "relations": {
+          "department": "employee"
+        }
       }
     }
   }
